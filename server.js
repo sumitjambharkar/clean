@@ -4,7 +4,7 @@ const User = require('./model/User')
 const fast2sms = require('fast-two-sms')
 require('dotenv').config()
 const app = express()
-const port = 3001
+const port = 3001 || process.env.port
 app.use(express.json())
 
 mongoose.connect(process.env.MONGODB_URL,{
